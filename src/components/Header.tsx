@@ -19,28 +19,28 @@ const Header:React.FC = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             {/* <div className="bg-gradient-to-r from-orange-500 to-blue-600 p-2 rounded-lg">
               <Zap className="h-6 w-6 text-white" />
             </div> */}
             <div>
-              <img src={logo} alt="" className='w-12 h-12' />
+              <img src={logo} alt="" className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12' />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-gray-900">JA TRD EST</span>
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">JA TRD EST</span>
               <span className="text-xs text-gray-600">Electricals & Safety</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4 lg:space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 sm:px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                   isActive(item.path)
                     ? 'text-orange-600 bg-orange-50'
                     : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
@@ -53,10 +53,10 @@ const Header:React.FC = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+            className="md:hidden p-1 sm:p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-orange-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
           </button>
         </div>
 
@@ -68,7 +68,7 @@ const Header:React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-3 py-2 rounded-md text-sm sm:text-base font-medium transition-colors ${
                     isActive(item.path)
                       ? 'text-orange-600 bg-orange-50'
                       : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'

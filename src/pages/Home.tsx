@@ -91,7 +91,7 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="h-[75vh] md:h-[80vh] lg:h-[90vh] bg-gray-100 relative text-white"
+        className="h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] bg-gray-100 relative text-white"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(37, 99, 235, 0.7), rgba(234, 88, 12, 0.7)), url(${banner})`,
           backgroundSize: 'cover',
@@ -100,29 +100,29 @@ const Home: React.FC = () => {
           boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.5)'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
           <div className={`text-center transition-all duration-1000 ease-out ${isVisible.hero
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl md:text-5xl font-bold mb-6">
-              Your trusted destination for <br />
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6">
+              Your trusted destination for <br className="hidden sm:block" />
               all electrical supplies and solutions
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 text-blue-100">
               Quality products, professional service, and expert guidance for all your electrical needs
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 to="/products"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center text-sm sm:text-base"
               >
                 View Products
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                className="border-2 border-white text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center text-sm sm:text-base"
               >
                 Get In Touch
               </Link>
@@ -132,18 +132,18 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white" data-section="about">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white" data-section="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isVisible.about
+          <div className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 ease-out ${isVisible.about
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               About JA TRD EST
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-600 mx-auto mb-4 sm:mb-6"></div>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Powering your projects with quality electrical supplies and exceptional service since 2010.
               We've grown from a small local supplier to a trusted partner for electrical professionals
               and businesses across the region.
@@ -151,40 +151,40 @@ const Home: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {/* Mission Statement */}
-              <div className={`bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-500 transition-all duration-1000 ease-out delay-200 ${isVisible.about
+              <div className={`bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 border-l-4 border-orange-500 transition-all duration-1000 ease-out delay-200 ${isVisible.about
                   ? 'opacity-100 transform translate-y-0'
                   : 'opacity-0 transform translate-y-8'
                 }`}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <Award className="h-5 w-5 text-white" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full flex items-center justify-center mr-2 sm:mr-3">
+                    <Award className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                   Our Mission
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                   To offer a comprehensive range of electrical products that meet the diverse
                   needs of our customers, ensuring safety, performance, and efficiency in every project.
                 </p>
               </div>
 
               {/* Values Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className={`bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.about
+                    className={`bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.about
                         ? 'opacity-100 transform translate-y-0'
                         : 'opacity-0 transform translate-y-8'
                       }`}
                     style={{ transitionDelay: `${400 + index * 100}ms` }}
                   >
-                    <div className="bg-gradient-to-r from-orange-500 to-blue-600 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <value.icon className="h-7 w-7 text-white" />
+                    <div className="bg-gradient-to-r from-orange-500 to-blue-600 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <value.icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white" />
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-3 text-center">{value.title}</h4>
-                    <p className="text-gray-600 text-sm text-center leading-relaxed">{value.description}</p>
+                    <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 text-center text-sm sm:text-base md:text-lg">{value.title}</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm md:text-base text-center leading-relaxed">{value.description}</p>
                   </div>
                 ))}
               </div>
@@ -196,10 +196,10 @@ const Home: React.FC = () => {
                 }`}>
                 <Link
                   to="/about"
-                  className="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+                  className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center text-sm sm:text-base"
                 >
                   Learn More About Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </div>
             </div>
@@ -208,36 +208,36 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-white" data-section="services">
+      <section className="py-12 sm:py-16 bg-white" data-section="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.services
+          <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.services
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive electrical solutions designed to meet your specific needs.
               From consultation to installation, we're here to support your projects.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.services
+                className={`bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.services
                     ? 'opacity-100 transform translate-y-0'
                     : 'opacity-0 transform translate-y-8'
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
-                <div className={`bg-gradient-to-r ${service.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
-                  <service.icon className="h-6 w-6 text-white" />
+                <div className={`bg-gradient-to-r ${service.color} w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4`}>
+                  <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm">{service.description}</p>
               </div>
             ))}
           </div>
@@ -248,26 +248,26 @@ const Home: React.FC = () => {
             }`}>
             <Link
               to="/services"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center text-sm sm:text-base"
             >
               View All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 bg-gray-50" data-section="products">
+      <section className="py-12 sm:py-16 bg-gray-50" data-section="products">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.products
+          <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.products
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Featured Products
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Discover our most popular electrical supplies and solutions
             </p>
           </div>
@@ -287,38 +287,38 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className={`text-center mt-12 transition-all duration-1000 ease-out delay-600 ${isVisible.products
+          <div className={`text-center mt-8 sm:mt-12 transition-all duration-1000 ease-out delay-600 ${isVisible.products
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
             <Link
               to="/products"
-              className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center text-sm sm:text-base"
             >
               Show More Products
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us & Impact Section */}
-      <section className="py-16 bg-white" data-section="whyChoose">
+      <section className="py-12 sm:py-16 bg-white" data-section="whyChoose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.whyChoose
+          <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.whyChoose
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Choose JA TRD EST?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Whether you're a DIY enthusiast, professional electrician, or business in need of reliable electrical components,
               we provide high-quality products and exceptional service for every project.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
             {[
               {
                 icon: CheckCircle,
@@ -347,22 +347,22 @@ const Home: React.FC = () => {
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
-                <div className={`bg-${item.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 transform hover:scale-110`}>
-                  <item.icon className={`h-8 w-8 text-${item.color}-600`} />
+                <div className={`bg-${item.color}-100 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-all duration-300 transform hover:scale-110`}>
+                  <item.icon className={`h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-${item.color}-600`} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base">{item.description}</p>
               </div>
             ))}
           </div>
 
           {/* Our Impact Section */}
-          <div className={`bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-100 transition-all duration-1000 ease-out delay-400 ${isVisible.whyChoose
+          <div className={`bg-gradient-to-r from-gray-50 to-white rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-100 transition-all duration-1000 ease-out delay-400 ${isVisible.whyChoose
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Impact</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Our Impact</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[
                 { icon: Users, number: "10,000+", text: "Happy Customers", color: "orange" },
                 { icon: Shield, number: "5,000+", text: "Products Available", color: "blue" },
@@ -374,11 +374,11 @@ const Home: React.FC = () => {
                   className="text-center group transition-all duration-500 transform hover:scale-105"
                   style={{ transitionDelay: `${600 + index * 100}ms` }}
                 >
-                  <div className={`bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <item.icon className="h-8 w-8 text-white" />
+                  <div className={`bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <item.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
                   </div>
-                  <div className={`text-4xl font-bold text-${item.color}-600 mb-2`}>{item.number}</div>
-                  <p className="text-gray-600 font-medium">{item.text}</p>
+                  <div className={`text-2xl sm:text-3xl md:text-4xl font-bold text-${item.color}-600 mb-1 sm:mb-2`}>{item.number}</div>
+                  <p className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -387,22 +387,22 @@ const Home: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50" data-section="contact">
+      <section className="py-12 sm:py-16 bg-gray-50" data-section="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.contact
+          <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.contact
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Get In Touch
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to start your electrical project? Contact our team of experts for personalized
               solutions and professional guidance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {[
               { icon: Phone, title: "Phone", info: "+1 (555) 123-4567", subInfo: "Mon-Fri 8:00 AM - 6:00 PM", color: "orange" },
               { icon: Mail, title: "Email", info: "info@jatrdest.com", subInfo: "We'll respond within 24 hours", color: "blue" },
@@ -416,12 +416,12 @@ const Home: React.FC = () => {
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
-                <div className={`bg-${item.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 transform hover:scale-110`}>
-                  <item.icon className={`h-8 w-8 text-${item.color}-600`} />
+                <div className={`bg-${item.color}-100 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-all duration-300 transform hover:scale-110`}>
+                  <item.icon className={`h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-${item.color}-600`} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.info}</p>
-                <p className="text-sm text-gray-500">{item.subInfo}</p>
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base">{item.info}</p>
+                <p className="text-sm text-gray-500 text-xs sm:text-sm">{item.subInfo}</p>
               </div>
             ))}
           </div>
@@ -432,10 +432,10 @@ const Home: React.FC = () => {
             }`}>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center text-sm sm:text-base"
             >
               Contact Us Today
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
           </div>
         </div>
