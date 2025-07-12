@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Wrench, 
-  Lightbulb, 
-  Shield, 
-  Truck, 
-  Users, 
-  Clock, 
+import {
+  Wrench,
+  Lightbulb,
+  Shield,
+  Truck,
+  Users,
+  Clock,
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
 
-const Services = () => {
+const Services: React.FC = () => {
   const services = [
     {
       icon: Wrench,
@@ -60,7 +60,7 @@ const Services = () => {
             Our Services
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive electrical solutions designed to meet your specific needs. 
+            Comprehensive electrical solutions designed to meet your specific needs.
             From consultation to installation, we're here to support your projects every step of the way.
           </p>
         </div>

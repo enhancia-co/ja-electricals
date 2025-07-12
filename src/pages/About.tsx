@@ -1,7 +1,7 @@
 import React from 'react';
 import { Award, Users, Shield, Target } from 'lucide-react';
 
-const About = () => {
+const About: React.FC = () => {
   const values = [
     {
       icon: Shield,
@@ -63,14 +63,14 @@ const About = () => {
         <div className="bg-white rounded-lg shadow-md p-8 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Welcome to JA TRD EST</h2>
           <p className="text-lg text-gray-600 mb-6">
-            Welcome to JA TRD EST, your trusted destination for all electrical supplies and solutions. 
-            Whether you're a DIY enthusiast, a professional electrician, or a business in need of reliable 
+            Welcome to JA TRD EST, your trusted destination for all electrical supplies and solutions.
+            Whether you're a DIY enthusiast, a professional electrician, or a business in need of reliable
             electrical components, we are here to provide high-quality products and exceptional service.
           </p>
           <p className="text-lg text-gray-600">
-            Founded with a passion for excellence and a commitment to customer satisfaction, we've grown 
-            from a small local supplier to a trusted partner for electrical professionals and businesses 
-            across the region. Our journey has been built on the foundation of quality, reliability, and 
+            Founded with a passion for excellence and a commitment to customer satisfaction, we've grown
+            from a small local supplier to a trusted partner for electrical professionals and businesses
+            across the region. Our journey has been built on the foundation of quality, reliability, and
             unwavering dedication to our customers' success.
           </p>
         </div>
@@ -80,13 +80,13 @@ const About = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-xl mb-6">
-              At JA TRD EST, our mission is to offer a comprehensive range of electrical products that meet 
-              the diverse needs of our customers. We strive to deliver top-notch products, from basic wiring 
+              At JA TRD EST, our mission is to offer a comprehensive range of electrical products that meet
+              the diverse needs of our customers. We strive to deliver top-notch products, from basic wiring
               to complex electrical systems, ensuring safety, performance, and efficiency in every project.
             </p>
             <p className="text-lg">
-              We believe that every electrical project, no matter how big or small, deserves the best components 
-              and the most knowledgeable support. That's why we're committed to being more than just a supplier – 
+              We believe that every electrical project, no matter how big or small, deserves the best components
+              and the most knowledgeable support. That's why we're committed to being more than just a supplier –
               we're your electrical solutions partner.
             </p>
           </div>
@@ -115,8 +115,8 @@ const About = () => {
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Electrical Components</h3>
               <p className="text-gray-600 mb-4">
-                We carry a wide variety of electrical supplies including cables, connectors, switches, 
-                outlets, and circuit breakers. Our inventory includes products from industry-leading 
+                We carry a wide variety of electrical supplies including cables, connectors, switches,
+                outlets, and circuit breakers. Our inventory includes products from industry-leading
                 manufacturers, ensuring reliability and performance in every application.
               </p>
               <ul className="text-gray-600 space-y-2">
@@ -129,8 +129,8 @@ const About = () => {
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Lighting Solutions</h3>
               <p className="text-gray-600 mb-4">
-                From traditional incandescent bulbs to cutting-edge LED systems, we offer comprehensive 
-                lighting solutions for residential, commercial, and industrial applications. Our lighting 
+                From traditional incandescent bulbs to cutting-edge LED systems, we offer comprehensive
+                lighting solutions for residential, commercial, and industrial applications. Our lighting
                 experts can help you find the perfect solution for any project.
               </p>
               <ul className="text-gray-600 space-y-2">

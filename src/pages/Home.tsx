@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Wrench, Lightbulb, Shield, Truck, Users, Clock, Award, MapPin, Phone, Mail } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
-import {featuredProducts} from "../data/products";
+import { featuredProducts } from "../data/products";
 
-const Home = () => {
+const Home: React.FC = () => {
   const services = [
     {
       icon: Wrench,
@@ -91,8 +91,8 @@ const Home = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Powering your projects with quality electrical supplies and exceptional service since 2010. 
-              We've grown from a small local supplier to a trusted partner for electrical professionals 
+              Powering your projects with quality electrical supplies and exceptional service since 2010.
+              We've grown from a small local supplier to a trusted partner for electrical professionals
               and businesses across the region.
             </p>
           </div>
@@ -108,7 +108,7 @@ const Home = () => {
                   Our Mission
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  To offer a comprehensive range of electrical products that meet the diverse 
+                  To offer a comprehensive range of electrical products that meet the diverse
                   needs of our customers, ensuring safety, performance, and efficiency in every project.
                 </p>
               </div>
@@ -135,7 +135,7 @@ const Home = () => {
                   Learn More About Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-    
+
               </div>
             </div>
 
@@ -152,7 +152,7 @@ const Home = () => {
               Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive electrical solutions designed to meet your specific needs. 
+              Comprehensive electrical solutions designed to meet your specific needs.
               From consultation to installation, we're here to support your projects.
             </p>
           </div>
@@ -219,7 +219,7 @@ const Home = () => {
               Why Choose JA TRD EST?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Whether you're a DIY enthusiast, professional electrician, or business in need of reliable electrical components, 
+              Whether you're a DIY enthusiast, professional electrician, or business in need of reliable electrical components,
               we provide high-quality products and exceptional service for every project.
             </p>
           </div>
@@ -293,7 +293,7 @@ const Home = () => {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your electrical project? Contact our team of experts for personalized 
+              Ready to start your electrical project? Contact our team of experts for personalized
               solutions and professional guidance.
             </p>
           </div>
