@@ -90,8 +90,8 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section 
-        className="h-screen relative text-white"
+      <section
+        className="h-[75vh] md:h-[80vh] lg:h-[90vh] bg-gray-100 relative text-white"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(37, 99, 235, 0.7), rgba(234, 88, 12, 0.7)), url(${banner})`,
           backgroundSize: 'cover',
@@ -101,14 +101,13 @@ const Home: React.FC = () => {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className={`text-center transition-all duration-1000 ease-out ${
-            isVisible.hero 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center transition-all duration-1000 ease-out ${isVisible.hero
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h1 className="text-2xl sm:text-3xl md:text-4xl md:text-5xl font-bold mb-6">
               Your trusted destination for <br />
-               all electrical supplies and solutions
+              all electrical supplies and solutions
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 text-blue-100">
               Quality products, professional service, and expert guidance for all your electrical needs
@@ -136,11 +135,10 @@ const Home: React.FC = () => {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white" data-section="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
-            isVisible.about 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isVisible.about
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About JA TRD EST
             </h2>
@@ -155,11 +153,10 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {/* Mission Statement */}
-              <div className={`bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-500 transition-all duration-1000 ease-out delay-200 ${
-                isVisible.about 
-                  ? 'opacity-100 transform translate-y-0' 
+              <div className={`bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-500 transition-all duration-1000 ease-out delay-200 ${isVisible.about
+                  ? 'opacity-100 transform translate-y-0'
                   : 'opacity-0 transform translate-y-8'
-              }`}>
+                }`}>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                   <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
                     <Award className="h-5 w-5 text-white" />
@@ -175,13 +172,12 @@ const Home: React.FC = () => {
               {/* Values Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {values.map((value, index) => (
-                  <div 
-                    key={index} 
-                    className={`bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${
-                      isVisible.about 
-                        ? 'opacity-100 transform translate-y-0' 
+                  <div
+                    key={index}
+                    className={`bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.about
+                        ? 'opacity-100 transform translate-y-0'
                         : 'opacity-0 transform translate-y-8'
-                    }`}
+                      }`}
                     style={{ transitionDelay: `${400 + index * 100}ms` }}
                   >
                     <div className="bg-gradient-to-r from-orange-500 to-blue-600 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -194,11 +190,10 @@ const Home: React.FC = () => {
               </div>
 
               {/* Call to Action */}
-              <div className={`text-center transition-all duration-1000 ease-out delay-600 ${
-                isVisible.about 
-                  ? 'opacity-100 transform translate-y-0' 
+              <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.about
+                  ? 'opacity-100 transform translate-y-0'
                   : 'opacity-0 transform translate-y-8'
-              }`}>
+                }`}>
                 <Link
                   to="/about"
                   className="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
@@ -215,11 +210,10 @@ const Home: React.FC = () => {
       {/* Services Section */}
       <section className="py-16 bg-white" data-section="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
-            isVisible.services 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.services
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Services
             </h2>
@@ -231,13 +225,12 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${
-                  isVisible.services 
-                    ? 'opacity-100 transform translate-y-0' 
+              <div
+                key={index}
+                className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.services
+                    ? 'opacity-100 transform translate-y-0'
                     : 'opacity-0 transform translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
                 <div className={`bg-gradient-to-r ${service.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
@@ -249,11 +242,10 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className={`text-center transition-all duration-1000 ease-out delay-600 ${
-            isVisible.services 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.services
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <Link
               to="/services"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -268,11 +260,10 @@ const Home: React.FC = () => {
       {/* Featured Products Section */}
       <section className="py-16 bg-gray-50" data-section="products">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
-            isVisible.products 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.products
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Featured Products
             </h2>
@@ -281,14 +272,13 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className={`grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 transition-all duration-1000 ease-out delay-200 ${
-            isVisible.products 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 transition-all duration-1000 ease-out delay-200 ${isVisible.products
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             {featuredProducts.map((product, index) => (
-              <div 
-                key={product.id} 
+              <div
+                key={product.id}
                 style={{ transitionDelay: `${300 + index * 50}ms` }}
                 className="transition-all duration-500 transform hover:scale-105"
               >
@@ -297,11 +287,10 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className={`text-center mt-12 transition-all duration-1000 ease-out delay-600 ${
-            isVisible.products 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mt-12 transition-all duration-1000 ease-out delay-600 ${isVisible.products
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <Link
               to="/products"
               className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -316,11 +305,10 @@ const Home: React.FC = () => {
       {/* Why Choose Us & Impact Section */}
       <section className="py-16 bg-white" data-section="whyChoose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
-            isVisible.whyChoose 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.whyChoose
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose JA TRD EST?
             </h2>
@@ -351,13 +339,12 @@ const Home: React.FC = () => {
                 color: "orange"
               }
             ].map((item, index) => (
-              <div 
+              <div
                 key={index}
-                className={`text-center transition-all duration-1000 ease-out ${
-                  isVisible.whyChoose 
-                    ? 'opacity-100 transform translate-y-0' 
+                className={`text-center transition-all duration-1000 ease-out ${isVisible.whyChoose
+                    ? 'opacity-100 transform translate-y-0'
                     : 'opacity-0 transform translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
                 <div className={`bg-${item.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 transform hover:scale-110`}>
@@ -370,11 +357,10 @@ const Home: React.FC = () => {
           </div>
 
           {/* Our Impact Section */}
-          <div className={`bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-100 transition-all duration-1000 ease-out delay-400 ${
-            isVisible.whyChoose 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-100 transition-all duration-1000 ease-out delay-400 ${isVisible.whyChoose
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Impact</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -383,8 +369,8 @@ const Home: React.FC = () => {
                 { icon: Award, number: "15+", text: "Years Experience", color: "orange" },
                 { icon: Clock, number: "24/7", text: "Customer Support", color: "blue" }
               ].map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="text-center group transition-all duration-500 transform hover:scale-105"
                   style={{ transitionDelay: `${600 + index * 100}ms` }}
                 >
@@ -403,11 +389,10 @@ const Home: React.FC = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gray-50" data-section="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
-            isVisible.contact 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isVisible.contact
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
@@ -423,13 +408,12 @@ const Home: React.FC = () => {
               { icon: Mail, title: "Email", info: "info@jatrdest.com", subInfo: "We'll respond within 24 hours", color: "blue" },
               { icon: MapPin, title: "Address", info: "123 Business Avenue", subInfo: "City, State 12345", color: "orange" }
             ].map((item, index) => (
-              <div 
+              <div
                 key={index}
-                className={`text-center transition-all duration-1000 ease-out ${
-                  isVisible.contact 
-                    ? 'opacity-100 transform translate-y-0' 
+                className={`text-center transition-all duration-1000 ease-out ${isVisible.contact
+                    ? 'opacity-100 transform translate-y-0'
                     : 'opacity-0 transform translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
                 <div className={`bg-${item.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 transform hover:scale-110`}>
@@ -442,11 +426,10 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className={`text-center transition-all duration-1000 ease-out delay-600 ${
-            isVisible.contact 
-              ? 'opacity-100 transform translate-y-0' 
+          <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.contact
+              ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
-          }`}>
+            }`}>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
