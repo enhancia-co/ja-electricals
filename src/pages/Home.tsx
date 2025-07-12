@@ -91,7 +91,7 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] bg-gray-100 relative text-white"
+        className="h-[50vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] bg-gray-100 relative text-white"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(37, 99, 235, 0.7), rgba(234, 88, 12, 0.7)), url(${banner})`,
           backgroundSize: 'cover',
