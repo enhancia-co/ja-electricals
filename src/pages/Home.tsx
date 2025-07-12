@@ -100,7 +100,7 @@ const Home: React.FC = () => {
           boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.5)'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
           <div className={`text-center transition-all duration-1000 ease-out ${isVisible.hero
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
