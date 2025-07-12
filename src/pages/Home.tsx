@@ -105,7 +105,7 @@ const Home: React.FC = () => {
               ? 'opacity-100 transform translate-y-0'
               : 'opacity-0 transform translate-y-8'
             }`}>
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6">
               Your trusted destination for <br className="hidden sm:block" />
               all electrical supplies and solutions
             </h1>
