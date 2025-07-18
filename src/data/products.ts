@@ -1,78 +1,5 @@
 import type { Product } from "../types/types";
 
-export const featuredProducts = [
-  {
-    id: 1,
-    title: 'LED Panel Lights',
-    description: 'Energy-efficient LED panels for commercial and residential use',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Lighting'
-  },
-  {
-    id: 2,
-    title: 'Circuit Breakers',
-    description: 'High-quality circuit breakers for electrical safety',
-    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Safety'
-  },
-  {
-    id: 3,
-    title: 'Electrical Cables',
-    description: 'Premium copper cables for all electrical installations',
-    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Cables'
-  },
-  {
-    id: 4,
-    title: 'Smart Switches',
-    description: 'Modern smart switches with WiFi connectivity',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Smart Home'
-  },
-  {
-    id: 5,
-    title: 'Power Outlets',
-    description: 'Durable power outlets for residential and commercial use',
-    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Outlets'
-  },
-  {
-    id: 6,
-    title: 'Junction Boxes',
-    description: 'Weather-resistant junction boxes for outdoor installations',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Boxes'
-  },
-  {
-    id: 7,
-    title: 'Conduit Pipes',
-    description: 'Flexible and rigid conduit pipes for cable protection',
-    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Conduits'
-  },
-  {
-    id: 8,
-    title: 'Voltage Testers',
-    description: 'Professional voltage testers for electrical safety',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Tools'
-  },
-  {
-    id: 9,
-    title: 'Emergency Lighting',
-    description: 'Battery-powered emergency lights for safety compliance',
-    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Emergency'
-  },
-  {
-    id: 10,
-    title: 'LED Panel Lights',
-    description: 'Energy-efficient LED panels for commercial and residential use',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=300',
-    category: 'Lighting'
-  }
-];
-
 // Power Components
 import mcb from "../assets/products/miniature-circuit-breakers.png";
 import mccb from "../assets/products/molded-case-circuit-breaker.png";
@@ -669,3 +596,87 @@ export const products: Product[] = [
     category: 'Safety Materials'
   }
 ]; 
+
+
+export const featuredProducts = [
+  // Power Components
+  {
+    id: 1,
+    title: 'Miniature Circuit Breakers (MCB)',
+    description: 'Reliable protection for electrical circuits against overload and short circuits.',
+    image: mcb,
+    category: 'Power Components'
+  },
+  // Panel Manufacturing
+  {
+    id: 6,
+    title: 'MDB (Main Distribution Board)',
+    description: 'Centralized panel for power distribution in buildings.',
+    image: mainDistributionBoardMdb,
+    category: 'Panel Manufacturing'
+  },
+  // CableTray Accessories
+  {
+    id: 12,
+    title: 'Cable Tray & Covers',
+    description: 'Support system for managing and protecting cables.',
+    image: cableTrayAndCovers,
+    category: 'CableTray Accessories'
+  },
+  // Industrial Sensor
+  {
+    id: 19,
+    title: 'Proximity Sensors',
+    description: 'Detects the presence of nearby objects without physical contact.',
+    image: proximitySensor,
+    category: 'Industrial Sensor'
+  },
+  // Programmable Logic Controllers (PLC)
+  {
+    id: 31,
+    title: 'Modular PLCs',
+    description: 'Flexible PLCs with expandable modules for various applications.',
+    image: modularPlc,
+    category: 'Programmable Logic Controllers (PLC)'
+  },
+  // Temperature Sensors
+  {
+    id: 36,
+    title: 'Thermocouples',
+    description: 'Temperature sensors using thermoelectric effect for measurement.',
+    image: thermocoupleSensor,
+    category: 'Temperature Sensors'
+  },
+  // Power & Control Cable
+  {
+    id: 46,
+    title: 'Flexible Power Cable',
+    description: 'Cables designed for flexible power transmission.',
+    image: flexiblePowerCable,
+    category: 'Power & Control Cable'
+  },
+  // Communication Cables
+  {
+    id: 51,
+    title: 'Twisted Pair Cables',
+    description: 'Cables for data and voice transmission.',
+    image: twistedPairCable,
+    category: 'Communication Cables'
+  },
+  // Panel Climate Controls
+  {
+    id: 57,
+    title: 'Terminal Blocks',
+    description: 'Connects and secures electrical wires in panels.',
+    image: terminalBlocks,
+    category: 'Panel Climate Controls'
+  },
+  // Safety Materials
+  {
+    id: 64,
+    title: 'Personal Protective Equipment (PPE)',
+    description: 'Equipment worn to minimize exposure to hazards.',
+    image: ppePersonalProtectiveEquipment,
+    category: 'Safety Materials'
+  }
+];
