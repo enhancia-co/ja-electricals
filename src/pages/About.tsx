@@ -25,26 +25,26 @@ const About: React.FC = () => {
     }
   ];
 
-  const team = [
-    {
-      name: 'John Anderson',
-      role: 'Founder & CEO',
-      description: 'With over 20 years in the electrical industry, John founded JA TRD EST to bridge the gap between quality and affordability.',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
-    },
-    {
-      name: 'Sarah Mitchell',
-      role: 'Technical Director',
-      description: 'Sarah brings 15 years of electrical engineering experience, ensuring our products meet the highest technical standards.',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
-    },
-    {
-      name: 'Mike Rodriguez',
-      role: 'Operations Manager',
-      description: 'Mike oversees our supply chain and logistics, ensuring fast, reliable delivery of products to our customers.',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
-    }
-  ];
+  // const team = [
+  //   {
+  //     name: 'John Anderson',
+  //     role: 'Founder & CEO',
+  //     description: 'With over 20 years in the electrical industry, John founded JA TRD EST to bridge the gap between quality and affordability.',
+  //     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
+  //   },
+  //   {
+  //     name: 'Sarah Mitchell',
+  //     role: 'Technical Director',
+  //     description: 'Sarah brings 15 years of electrical engineering experience, ensuring our products meet the highest technical standards.',
+  //     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
+  //   },
+  //   {
+  //     name: 'Mike Rodriguez',
+  //     role: 'Operations Manager',
+  //     description: 'Mike oversees our supply chain and logistics, ensuring fast, reliable delivery of products to our customers.',
+  //     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
+  //   }
+  // ];
 
   return (
     <div className="py-8 sm:py-12 md:py-16 bg-gray-50">
