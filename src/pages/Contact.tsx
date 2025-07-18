@@ -8,6 +8,8 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -19,10 +21,16 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(true);
+    setSubmitted(false);
+    // Simulate async submission
+    setTimeout(() => {
+      setLoading(false);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      // Optionally, reset submitted after a delay
+      setTimeout(() => setSubmitted(false), 2000);
+    }, 1500);
   };
 
   return (
@@ -52,8 +60,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Phone</h3>
-                    <p className="text-gray-600 text-sm sm:text-base">+1 (555) 123-4567</p>
-                    <p className="text-xs sm:text-sm text-gray-500">Mon-Fri 8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600 text-sm sm:text-base">+966 536762839</p>
+                    {/* <p className="text-xs sm:text-sm text-gray-500">Mon-Fri 8:00 AM - 6:00 PM</p> */}
                   </div>
                 </div>
 
@@ -63,8 +71,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Email</h3>
-                    <p className="text-gray-600 text-sm sm:text-base">info@jatrdest.com</p>
-                    <p className="text-xs sm:text-sm text-gray-500">We'll respond within 24 hours</p>
+                    <p className="text-gray-600 text-sm sm:text-base">jalalaliahmedattiesfest@gmail.com</p>
+                    {/* <p className="text-xs sm:text-sm text-gray-500">We'll respond within 24 hours</p> */}
                   </div>
                 </div>
 
@@ -74,8 +82,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Address</h3>
-                    <p className="text-gray-600 text-sm sm:text-base">123 Business Avenue<br />City, State 12345</p>
-                    <p className="text-xs sm:text-sm text-gray-500">Visit our showroom</p>
+                    <p className="text-gray-600 text-sm sm:text-base">Al Falah St-Al Qurayat Dist. <br />Jeddah Kingdom of Saudi Arabia</p>
+                    {/* <p className="text-xs sm:text-sm text-gray-500">Visit our showroom</p> */}
                   </div>
                 </div>
 
@@ -96,7 +104,7 @@ const Contact = () => {
             </div>
 
             {/* Emergency Contact */}
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-lg p-4 sm:p-6 md:p-8 text-white">
+            {/* <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-lg p-4 sm:p-6 md:p-8 text-white">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Emergency Services</h3>
               <p className="mb-3 sm:mb-4 text-sm sm:text-base">
                 Need electrical supplies urgently? We offer 24/7 emergency support for critical situations.
@@ -105,7 +113,7 @@ const Contact = () => {
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span className="font-semibold text-sm sm:text-base">Emergency Line: +1 (555) 999-0000</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
@@ -116,7 +124,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                    Name *
+                    Name
                   </label>
                   <input
                     type="text"
@@ -125,13 +133,13 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                    className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                    Email *
+                    Email
                   </label>
                   <input
                     type="email"
@@ -140,7 +148,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                    className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -148,7 +156,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                  Subject *
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -157,14 +165,14 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleInputChange}
-                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
                   placeholder="How can we help you?"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                  Message *
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -173,17 +181,31 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
                   placeholder="Tell us about your project or question..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-orange-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center text-sm sm:text-base"
+                className={`w-full bg-orange-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold transition-colors flex items-center justify-center text-sm sm:text-base ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-orange-700'}`}
+                disabled={loading || submitted}
               >
-                <Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                Send Message
+                {loading ? (
+                  <svg className="animate-spin h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                  </svg>
+                ) : submitted ? (
+                  <span className="flex items-center">
+                    <svg className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Submitted
+                  </span>
+                ) : (
+                  <span className="flex items-center"><Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" /> Send Message</span>
+                )}
               </button>
             </form>
           </div>

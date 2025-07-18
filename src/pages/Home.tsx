@@ -91,7 +91,7 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="h-[50vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] bg-gray-100 relative text-white"
+        className="h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] bg-gray-100 relative text-white"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(37, 99, 235, 0.7), rgba(234, 88, 12, 0.7)), url(${banner})`,
           backgroundSize: 'cover',
@@ -102,10 +102,17 @@ const Home: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
           <div className={`text-center transition-all duration-1000 ease-out ${isVisible.hero
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6">
+            {/* here add  */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 text-white">
+              Jalal Ali Ahmad Otayyif Trading Est
+            </h2>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-10" style={{ color: '#FFD600' }}>
+              مؤسسة جلال علي احمد عطيف التجارية
+            </h3>
+            <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6">
               Your trusted destination for <br className="hidden sm:block" />
               all electrical supplies and solutions
             </h1>
@@ -136,8 +143,8 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 ease-out ${isVisible.about
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               About JA TRD EST
@@ -154,8 +161,8 @@ const Home: React.FC = () => {
             <div className="space-y-6 sm:space-y-8">
               {/* Mission Statement */}
               <div className={`bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 border-l-4 border-orange-500 transition-all duration-1000 ease-out delay-200 ${isVisible.about
-                  ? 'opacity-100 transform translate-y-0'
-                  : 'opacity-0 transform translate-y-8'
+                ? 'opacity-100 transform translate-y-0'
+                : 'opacity-0 transform translate-y-8'
                 }`}>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full flex items-center justify-center mr-2 sm:mr-3">
@@ -164,8 +171,10 @@ const Home: React.FC = () => {
                   Our Mission
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                  To offer a comprehensive range of electrical products that meet the diverse
-                  needs of our customers, ensuring safety, performance, and efficiency in every project.
+                  At <strong> JA</strong>  , our mission is to offer a comprehensive range of electrical products
+                  that meet the diverse needs of our customers. We strive to deliver top-notch
+                  products, from basic wiring to complex electrical systems, ensuring safety,
+                  performance, and efficiency in every project.
                 </p>
               </div>
 
@@ -175,8 +184,8 @@ const Home: React.FC = () => {
                   <div
                     key={index}
                     className={`bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.about
-                        ? 'opacity-100 transform translate-y-0'
-                        : 'opacity-0 transform translate-y-8'
+                      ? 'opacity-100 transform translate-y-0'
+                      : 'opacity-0 transform translate-y-8'
                       }`}
                     style={{ transitionDelay: `${400 + index * 100}ms` }}
                   >
@@ -191,8 +200,8 @@ const Home: React.FC = () => {
 
               {/* Call to Action */}
               <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.about
-                  ? 'opacity-100 transform translate-y-0'
-                  : 'opacity-0 transform translate-y-8'
+                ? 'opacity-100 transform translate-y-0'
+                : 'opacity-0 transform translate-y-8'
                 }`}>
                 <Link
                   to="/about"
@@ -211,8 +220,8 @@ const Home: React.FC = () => {
       <section className="py-12 sm:py-16 bg-white" data-section="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.services
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Our Services
@@ -228,8 +237,8 @@ const Home: React.FC = () => {
               <div
                 key={index}
                 className={`bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${isVisible.services
-                    ? 'opacity-100 transform translate-y-0'
-                    : 'opacity-0 transform translate-y-8'
+                  ? 'opacity-100 transform translate-y-0'
+                  : 'opacity-0 transform translate-y-8'
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
@@ -243,8 +252,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.services
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <Link
               to="/services"
@@ -261,8 +270,8 @@ const Home: React.FC = () => {
       <section className="py-12 sm:py-16 bg-gray-50" data-section="products">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.products
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Featured Products
@@ -273,8 +282,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className={`grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 transition-all duration-1000 ease-out delay-200 ${isVisible.products
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             {featuredProducts.map((product, index) => (
               <div
@@ -288,8 +297,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className={`text-center mt-8 sm:mt-12 transition-all duration-1000 ease-out delay-600 ${isVisible.products
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <Link
               to="/products"
@@ -306,8 +315,8 @@ const Home: React.FC = () => {
       <section className="py-12 sm:py-16 bg-white" data-section="whyChoose">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.whyChoose
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Choose JA TRD EST?
@@ -342,8 +351,8 @@ const Home: React.FC = () => {
               <div
                 key={index}
                 className={`text-center transition-all duration-1000 ease-out ${isVisible.whyChoose
-                    ? 'opacity-100 transform translate-y-0'
-                    : 'opacity-0 transform translate-y-8'
+                  ? 'opacity-100 transform translate-y-0'
+                  : 'opacity-0 transform translate-y-8'
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
@@ -358,8 +367,8 @@ const Home: React.FC = () => {
 
           {/* Our Impact Section */}
           <div className={`bg-gradient-to-r from-gray-50 to-white rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-100 transition-all duration-1000 ease-out delay-400 ${isVisible.whyChoose
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Our Impact</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
@@ -390,8 +399,8 @@ const Home: React.FC = () => {
       <section className="py-12 sm:py-16 bg-gray-50" data-section="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 ease-out ${isVisible.contact
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Get In Touch
@@ -404,15 +413,15 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {[
-              { icon: Phone, title: "Phone", info: "+1 (555) 123-4567", subInfo: "Mon-Fri 8:00 AM - 6:00 PM", color: "orange" },
-              { icon: Mail, title: "Email", info: "info@jatrdest.com", subInfo: "We'll respond within 24 hours", color: "blue" },
-              { icon: MapPin, title: "Address", info: "123 Business Avenue", subInfo: "City, State 12345", color: "orange" }
+              { icon: Phone, title: "Phone", info: "+966 536762839", subInfo: "Mon-Fri 8:00 AM - 6:00 PM", color: "orange" },
+              { icon: Mail, title: "Email", info: "jalalaliahmedattiesfest@gmail.com", subInfo: "", color: "blue" },
+              { icon: MapPin, title: "Address", info: "Al Falah St-Al Qurayat Dist.", subInfo: "Jeddah Kingdom of Saudi Arabia", color: "orange" }
             ].map((item, index) => (
               <div
                 key={index}
                 className={`text-center transition-all duration-1000 ease-out ${isVisible.contact
-                    ? 'opacity-100 transform translate-y-0'
-                    : 'opacity-0 transform translate-y-8'
+                  ? 'opacity-100 transform translate-y-0'
+                  : 'opacity-0 transform translate-y-8'
                   }`}
                 style={{ transitionDelay: `${200 + index * 150}ms` }}
               >
@@ -421,14 +430,14 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base">{item.info}</p>
-                <p className="text-sm text-gray-500 text-xs sm:text-sm">{item.subInfo}</p>
+                <p className="text-gray-500 text-xs sm:text-sm">{item.subInfo}</p>
               </div>
             ))}
           </div>
 
           <div className={`text-center transition-all duration-1000 ease-out delay-600 ${isVisible.contact
-              ? 'opacity-100 transform translate-y-0'
-              : 'opacity-0 transform translate-y-8'
+            ? 'opacity-100 transform translate-y-0'
+            : 'opacity-0 transform translate-y-8'
             }`}>
             <Link
               to="/contact"

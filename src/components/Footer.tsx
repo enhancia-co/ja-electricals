@@ -74,16 +74,21 @@ const Footer: React.FC = () => {
             <ul className="space-y-1 sm:space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-xs sm:text-sm">+966 536762839</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">info@jatrdest.com</span>
+                <span className="text-gray-400 text-xs sm:text-sm">jalalaliahmedattiesfest@gmail.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">123 Business Ave, City, State 12345</span>
+                <span className="text-gray-400 text-xs sm:text-sm">
+                  Al Falah St-Al Qurayat Dist.<br />
+                  Jeddah Kingdom of Saudi Arabia
+                </span>
+                
               </li>
+              
             </ul>
           </div>
         </div>

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        body: ['Roboto', 'sans-serif'],
+        heading: ['Hanken Grotesk', 'sans-serif'],
+        body: ['Hanken Grotesk', 'sans-serif'],
       },
       screens: {
         'xs': '475px',

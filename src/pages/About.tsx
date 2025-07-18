@@ -144,7 +144,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Our Team */}
-        <div className="mb-8 sm:mb-12 md:mb-16">
+        {/* <div className="mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8 sm:mb-12">Meet Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {team.map((member, index) => (
@@ -162,7 +162,7 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Statistics */}
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">

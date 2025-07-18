@@ -94,7 +94,7 @@ const Services: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-flex items-center text-sm sm:text-base"
+            className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-flex items-center text-sm sm:text-base"
           >
             Get In Touch
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

@@ -230,7 +230,7 @@ const Products: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search products..."
-                  className="w-full pl-10 pr-4 py-1.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 text-sm bg-gray-50 focus:bg-white hover:bg-white placeholder-gray-400 shadow-sm"
+                  className="w-full pl-10 pr-4 py-1.5 border border-gray-200 rounded-lg focus:border-orange-500 transition-all duration-200 text-sm bg-gray-50 focus:bg-white hover:bg-white placeholder-gray-400 shadow-sm"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
