@@ -1,9 +1,13 @@
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
-import type { Product } from '../data/products';
+import type { Product } from '../types/types';
 
 interface ProductCardProps {
   product: Product;
+}
+
+function getDisplayCategory(category: string) {
+  return category === "Programmable Logic Controllers (PLC)" ? "PLC" : category;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
@@ -29,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Category Badge */}
         <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-3 md:left-3">
           <span className="inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
-            {product.category}
+            {getDisplayCategory(product.category)}
           </span>
         </div>
       </div>

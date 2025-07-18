@@ -20,6 +20,8 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
   className = '',
   size = 'md'
 }) => {
+  // Ensure 'All' is always the first option
+  const dropdownOptions = options[0] === 'All' ? options : ['All', ...options.filter(opt => opt !== 'All')];
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -54,7 +56,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
       option: 'px-4 py-2 text-base'
     },
     lg: {
-      container: 'text-lg',
+      container: 'text-md',
       button: 'py-2 px-5',
       icon: 'h-6 w-6',
       chevron: 'h-6 w-6',
@@ -89,7 +91,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
             </div>
           )}
           <span className={value === 'All' ? 'text-gray-500' : 'text-gray-900'}>
-            {value || placeholder}
+            {value === 'Programmable Logic Controllers (PLC)' ? 'PLC' : (value || placeholder)}
           </span>
         </div>
         <ChevronDown 
@@ -103,7 +105,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
       {isOpen && (
         <div className="absolute z-50 w-full mt-2 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
           <div className={`${currentSize.options} max-h-60 overflow-y-auto`}>
-            {options.map((option, index) => (
+            {dropdownOptions.map((option, index) => (
               <button
                 key={option}
                 type="button"
@@ -118,10 +120,15 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
                   ${currentSize.option}
                   ${value === option ? 'bg-orange-50 text-orange-600' : 'text-gray-700'}
                   ${index === 0 ? 'rounded-t-lg' : ''}
-                  ${index === options.length - 1 ? 'rounded-b-lg' : ''}
+                  ${index === dropdownOptions.length - 1 ? 'rounded-b-lg' : ''}
                 `}
               >
-                <span className="font-medium">{option}</span>
+                <span
+                  className='font-medium text-md truncate max-w-full block'
+                  title={option}
+                >
+                  {option}
+                </span>
                 {value === option && (
                   <Check className="h-4 w-4 text-orange-600" />
                 )}

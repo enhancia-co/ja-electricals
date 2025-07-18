@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Search, Filter, ChevronLeft, ChevronRight } from 'lucide-react'
 import ProductCard from '../components/ProductCard';
 import CustomDropdown from '../components/CustomDropdown';
-import { products, categories } from '../data/products';
-import type { Product } from '../data/products';
+import { products } from '../data/products';
+import { categories } from '../data/categories';
+import type { Product } from '../types/types';
 
 const Products: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,7 +40,7 @@ const Products: React.FC = () => {
     const getPageNumbers = () => {
       const pages = [];
       const maxVisiblePages = 5;
-      
+
       if (totalPages <= maxVisiblePages) {
         for (let i = 1; i <= totalPages; i++) {
           pages.push(i);
@@ -67,7 +68,7 @@ const Products: React.FC = () => {
           pages.push(totalPages);
         }
       }
-      
+
       return pages;
     };
 
@@ -92,11 +93,10 @@ const Products: React.FC = () => {
               ) : (
                 <button
                   onClick={() => handlePageChange(page as number)}
-                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                    currentPage === page
-                      ? 'bg-orange-500 text-white'
-                      : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-700'
-                  }`}
+                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${currentPage === page
+                    ? 'bg-orange-500 text-white'
+                    : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-700'
+                    }`}
                 >
                   {page}
                 </button>
