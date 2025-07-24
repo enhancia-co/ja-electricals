@@ -413,8 +413,8 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {[
-              { icon: Phone, title: "Phone", info: "+966 536762839", subInfo: "Mon-Fri 8:00 AM - 6:00 PM", color: "orange" },
-              { icon: Mail, title: "Email", info: "jalalaliahmedattiesfest@gmail.com", subInfo: "", color: "blue" },
+              { icon: Phone, title: "Phone", info: "+966 550613197", subInfo: "09:30 AM - 7:00 PM, Friday holiday", color: "orange" },
+              { icon: Mail, title: "Email", info: "Sales@jatraders.com", subInfo: "", color: "blue" },
               { icon: MapPin, title: "Address", info: "Al Falah St-Al Qurayat Dist.", subInfo: "Jeddah Kingdom of Saudi Arabia", color: "orange" }
             ].map((item, index) => (
               <div

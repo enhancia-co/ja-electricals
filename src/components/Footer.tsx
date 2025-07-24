@@ -74,11 +74,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-1 sm:space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">+966 536762839</span>
+                <span className="text-gray-400 text-xs sm:text-sm">+966 550613197</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">jalalaliahmedattiesfest@gmail.com</span>
+                <span className="text-gray-400 text-xs sm:text-sm">Sales@jatraders.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin size={14} className="sm:w-4 sm:h-4 text-orange-500" />
