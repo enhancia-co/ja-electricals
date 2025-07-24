@@ -12,7 +12,7 @@ function getDisplayCategory(category: string) {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = '+966536762839'; 
+    const phoneNumber = '+966550613197'; 
     const message = `Hi! I'm interested in the product *${product.title}*. Can you provide more details about pricing and availability?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
