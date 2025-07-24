@@ -15,6 +15,9 @@ const Home: React.FC = () => {
     contact: false
   });
 
+  // Calculate years of experience dynamically
+  const yearsExperience = new Date().getFullYear() - 2015;
+
   useEffect(() => {
     // Trigger hero animation on mount
     setIsVisible(prev => ({ ...prev, hero: true }));
@@ -151,7 +154,7 @@ const Home: React.FC = () => {
             </h2>
             <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-600 mx-auto mb-4 sm:mb-6"></div>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Powering your projects with quality electrical supplies and exceptional service since 2010.
+              Powering your projects with quality electrical supplies and exceptional service since 2015.
               We've grown from a small local supplier to a trusted partner for electrical professionals
               and businesses across the region.
             </p>
@@ -373,9 +376,9 @@ const Home: React.FC = () => {
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Our Impact</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[
-                { icon: Users, number: "10,000+", text: "Happy Customers", color: "orange" },
-                { icon: Shield, number: "5,000+", text: "Products Available", color: "blue" },
-                { icon: Award, number: "15+", text: "Years Experience", color: "orange" },
+                { icon: Users, number: "1000+", text: "Happy Customers", color: "orange" },
+                { icon: Shield, number: "100+", text: "Products Available", color: "blue" },
+                { icon: Award, number: `${yearsExperience}+`, text: "Years Experience", color: "orange" },
                 { icon: Clock, number: "24/7", text: "Customer Support", color: "blue" }
               ].map((item, index) => (
                 <div
@@ -414,7 +417,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {[
               { icon: Phone, title: "Phone", info: "+966 550613197", subInfo: "09:30 AM - 7:00 PM, Friday holiday", color: "orange" },
-              { icon: Mail, title: "Email", info: "Sales@jatraders.com", subInfo: "", color: "blue" },
+              { icon: Mail, title: "Email", info: "sales@jatraders.com", subInfo: "", color: "blue" },
               { icon: MapPin, title: "Address", info: "Al Falah St-Al Qurayat Dist.", subInfo: "Jeddah Kingdom of Saudi Arabia", color: "orange" }
             ].map((item, index) => (
               <div

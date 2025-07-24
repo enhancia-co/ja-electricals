@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import axios from 'axios';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -19,18 +20,27 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setSubmitted(false);
-    // Simulate async submission
-    setTimeout(() => {
+    setSubmitError('');
+    setSubmitSuccess(false);
+
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+    try {
+      const response = await axios.post(`https://formsubmit.co/ajax/${import.meta.env.VITE_FORM_SUBMIT_EMAIL}`, formData);
+      if (response.status >= 200 && response.status < 300) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitError('There was an error submitting the form. Please try again.');
+      }
+    } catch (error) {
+      setSubmitError('There was an error submitting the form. Please try again.');
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      // Optionally, reset submitted after a delay
-      setTimeout(() => setSubmitted(false), 2000);
-    }, 1500);
+    }
   };
 
   return (
@@ -71,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Email</h3>
-                    <p className="text-gray-600 text-sm sm:text-base">Sales@jatraders.com</p>
+                    <p className="text-gray-600 text-sm sm:text-base">sales@jatraders.com</p>
                     {/* <p className="text-xs sm:text-sm text-gray-500">We'll respond within 24 hours</p> */}
                   </div>
                 </div>
@@ -119,95 +129,105 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Send Us a Message</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                    Name
+            {submitSuccess ? (
+              <div className="text-center py-4 sm:py-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-100 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Send className="text-orange-600 w-6 h-6 sm:w-8 sm:h-8" />
+                </div>
+                <h3 className="font-serif text-lg sm:text-xl font-bold text-gray-900 mb-2">Message sent successfully!</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">Thank you for contacting us. We will get back to you as soon as possible.</p>
+                <button
+                  onClick={() => setSubmitSuccess(false)}
+                  className="bg-orange-600 hover:bg-orange-700 text-white px-4 sm:px-5 py-2 rounded-full transition-colors text-sm sm:text-base"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+
+                {/* <div>
+                  <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
+                    Subject
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="subject"
+                    name="subject"
                     required
-                    value={formData.name}
+                    value={formData.subject}
                     onChange={handleInputChange}
                     className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
-                    placeholder="Your full name"
+                    placeholder="How can we help you?"
                   />
-                </div>
+                </div> */}
+
                 <div>
-                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                    Email
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
+                    Message
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
+                  <textarea
+                    id="message"
+                    name="message"
                     required
-                    value={formData.email}
+                    rows={4}
+                    value={formData.message}
                     onChange={handleInputChange}
                     className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
-                    placeholder="your.email@example.com"
+                    placeholder="Tell us about your project or question..."
                   />
                 </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
-                  placeholder="How can we help you?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent text-sm sm:text-base"
-                  placeholder="Tell us about your project or question..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className={`w-full bg-orange-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold transition-colors flex items-center justify-center text-sm sm:text-base ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-orange-700'}`}
-                disabled={loading || submitted}
-              >
-                {loading ? (
-                  <svg className="animate-spin h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-                  </svg>
-                ) : submitted ? (
-                  <span className="flex items-center">
-                    <svg className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Submitted
-                  </span>
-                ) : (
-                  <span className="flex items-center"><Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" /> Send Message</span>
+                {submitError && (
+                  <div className="text-red-600 text-sm text-center">{submitError}</div>
                 )}
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  className={`w-full bg-orange-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold transition-colors flex items-center justify-center text-sm sm:text-base ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-orange-700'}`}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <svg className="animate-spin h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                  ) : (
+                    <span className="flex items-center"><Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2" /> Send Message</span>
+                  )}
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
@@ -215,12 +235,17 @@ const Contact = () => {
         <div className="mt-8 sm:mt-12 md:mt-16">
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">Visit Our Location</h2>
-            <div className="bg-gray-200 rounded-lg h-48 sm:h-56 md:h-64 flex items-center justify-center">
-              <p className="text-gray-600 text-center text-sm sm:text-base">
-                <MapPin className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 mx-auto mb-2 text-orange-600" />
-                Interactive Map Coming Soon<br />
-                <span className="text-xs sm:text-sm">123 Business Avenue, City, State 12345</span>
-              </p>
+            <div className="rounded-lg overflow-hidden w-full h-64 sm:h-80 md:h-[450px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2778.438175335659!2d39.1939250752709!3d21.545799980236083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDMyJzQ0LjkiTiAzOcKwMTEnNDcuNCJF!5e1!3m2!1sen!2sin!4v1753366500514!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="JA Electricals Location Map"
+              ></iframe>
             </div>
           </div>
         </div>

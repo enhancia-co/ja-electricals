@@ -55,7 +55,7 @@ const About: React.FC = () => {
             About JA TRD EST
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Powering your projects with quality electrical supplies and exceptional service since 2010.
+            Powering your projects with quality electrical supplies and exceptional service since 2015.
           </p>
         </div>
 
@@ -169,15 +169,15 @@ const About: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8 sm:mb-12">Our Impact</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
             <div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-2">10,000+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-2">1000+</div>
               <p className="text-xs sm:text-sm text-gray-600">Happy Customers</p>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2">5,000+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2">100+</div>
               <p className="text-xs sm:text-sm text-gray-600">Products Available</p>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-2">15+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-2">{`${new Date().getFullYear() - 2015}+`}</div>
               <p className="text-xs sm:text-sm text-gray-600">Years Experience</p>
             </div>
             <div>

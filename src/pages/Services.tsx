@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 
 import { services } from '../data/services';
+
 const Services: React.FC = () => {
  
   return (

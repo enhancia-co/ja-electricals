@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={14} className="sm:w-4 sm:h-4 text-orange-500" />
-                <span className="text-gray-400 text-xs sm:text-sm">Sales@jatraders.com</span>
+                <span className="text-gray-400 text-xs sm:text-sm">sales@jatraders.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin size={14} className="sm:w-4 sm:h-4 text-orange-500" />
